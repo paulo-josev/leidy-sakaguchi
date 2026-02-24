@@ -1,19 +1,19 @@
 /* CSS Variables */
 :root {
     /* Colors */
-    --primary-color: #4c1d95;
-    --primary-dark: #3b0764;
-    --primary-light: #6d28d9;
-    --accent-color: #d4af37;
-    --accent-dark: #b8941f;
-    --accent-light: #f4d475;
+    --primary-color: #422059;
+    --primary-dark: #422050;
+    --primary-light: #422059;
+    --accent-color: #D0A933;
+    --accent-dark: green;
+    --accent-light: red;
 
     /* Neutral Colors */
-    --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --text-light: #9ca3af;
-    --bg-white: #ffffff;
-    --bg-light: #f9fafb;
+    --text-primary: black;
+    --text-secondary: black;
+    --text-light: black;
+    --bg-white: #D0A933;
+    --bg-light: #D0A933;
     --bg-gray: #f3f4f6;
     --border-color: #e5e7eb;
 
@@ -71,7 +71,7 @@ body {
     font-family: var(--font-primary);
     color: var(--text-primary);
     line-height: 1.6;
-    background-color: var(--bg-white);
+    background-color: #422059;
     overflow-x: hidden;
 }
 
@@ -117,7 +117,7 @@ section {
 
 .section-subtitle {
     display: inline-block;
-    color: var(--accent-color);
+    color: black;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
