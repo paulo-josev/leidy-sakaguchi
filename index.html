@@ -409,9 +409,6 @@
         </div>
     </section>
 
-
-
-
     <!-- Highlights Section -->
     <section class="highlights">
         <div class="container">
@@ -656,7 +653,6 @@
                     </p>
                 </div>
 
-
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <img src="Juliana-Corona.jpeg" alt="Juliana Corona" class="testimonial-avatar">
@@ -690,10 +686,11 @@
             </div>
             <div class="faq-container">
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <div
+                     class="faq-question">
                         <span>O que exatamente você trabalha na mentoria?</span>
                         <i class="fas fa-chevron-down"></i>
-                    </button>
+                    </div>
                     <div class="faq-answer">
                         <p>
                             R: Trabalho identidade, estrutura mental e posicionamento.
@@ -907,5 +904,29 @@
     </button>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200; // Velocidade da contagem (quanto menor, mais rápido)
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target'); // Pega o número final
+                    const count = +counter.innerText; // Pega o número atual
+
+                    const inc = target / speed; // Define o incremento
+
+                    if (count < target) {
+                        // Adiciona o incremento e arredonda
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 1); // Chama a função novamente
+                    } else {
+                        counter.innerText = target; // Garante que termine no número exato
+                    }
+                };
+                updateCount();
+            });
+        });
+    </script>
 </body>
 </html>
